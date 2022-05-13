@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import requests
 from termcolor import colored
 
-from utils import highlight_words
+from utils import highlight_words, LANG_ABBREV
 
 
 class QueryParser:
@@ -139,10 +139,11 @@ class ReversoContext(QueryParser):
     Gives translations of the word in context.
     The info is fetched from context.reverso.net.
     """
-    def __init__(self, num_examples=4, textwidth=80):
+    def __init__(self, num_examples=4, textwidth=80, lang='russian'):
         super().__init__(textwidth)
-        self.base = 'https://context.reverso.net/translation/english-russian'
+        self.base = f'https://context.reverso.net/translation/english-{lang}'
         self.num_examples = num_examples
+        self.lang = LANG_ABBREV[lang]
 
     def highlight_words(self, soup_sen):
         sen = soup_sen.text.strip()
@@ -171,8 +172,9 @@ class ReversoContext(QueryParser):
         for elem in elems:
             ## ('span', 'text') finds only <span class='text'>
             ## but doesn't pick up <span class='text' lang='ru'>.
+            ## 'ru' is taken for example.
             sentence = elem.find('span', 'text')
-            translation = elem.find('span', lang='ru')
+            translation = elem.find('span', lang=self.lang)
 
             sentence = self.highlight_words(sentence)
             translation = self.highlight_words(translation)

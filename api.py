@@ -17,7 +17,9 @@ from tma import Macmillan, ReversoContext
 class API:
     def __init__(self, conf: DictConfig | ListConfig):
         self.mm = Macmillan(conf.textwidth)
-        self.rc = ReversoContext(conf.num_samples, conf.textwidth)
+        self.rc = ReversoContext(
+                conf.num_samples, conf.textwidth,
+                conf.target_context_language)
 
         self.voice = pyttsx3.init()
         self.voice.setProperty('rate', conf.speech_rate)

@@ -2,6 +2,7 @@ speech_rate: 140
 
 ## speicify the absolute path
 history_file: /home/lukoshkin/Workspace/plugins/sh-plugins/tma/.tt_history
+target_context_language: russian
 
 textwidth: 80
 num_samples: 4

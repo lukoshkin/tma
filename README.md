@@ -42,7 +42,13 @@ echo 'alias tt="${CONDA_PREFIX_1:-$CONDA_PREFIX}/envs/tma ~/Workspace/tma/api.py
 
 ## Usage
 
+⚙️  Customization is available via `config.yaml`.
 
-| non-interactive <br> `tt perforation` |      interactive <br> `tt`  <br> succint (error intended) |
-|:-------------------------------------:|:---------------------------------------------------------:|
-| ![Image](./png/usage-1.png =400x350)  |          ![Image](./png/usage-2.png =400x350)             |
+
+| non-interactive <br> `tt perforation` | interactive <br> `tt`  <br> succint (deliberate mistake) |
+|:-------------------------------------:|:--------------------------------------------------------:|
+| <img src="https://github.com/lukoshkin/tma/blob/master/png/usage-1.png" width="400" height="350"> | <img src="https://github.com/lukoshkin/tma/blob/master/png/usage-2.png" width="400" height="350"> |
+
+<!--
+| ![](png/usage-1.png =400x350) | ![](png/usage-2.png =400x350) |
+-->

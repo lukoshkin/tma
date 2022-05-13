@@ -23,3 +23,21 @@ def highlight_words(sen:str, words:list, color='yellow'):
     acc += sen
     return acc
 
+LANG_ABBREV = {
+  'dutch': 'nl',
+  'polish': 'pl',
+  'arabic': 'ar',
+  'french': 'fr',
+  'german': 'de',
+  'hebrew': 'he',
+  'italian': 'it',
+  'spanish': 'es',
+  'russian': 'ru',
+  'turkish': 'tr',
+  'chinise': 'zh',
+  'swedish': 'sv',
+  'romanian': 'ro',
+  'japanese': 'ja',
+  'ukrainian': 'uk',
+  'portuguese': 'pt',
+}
