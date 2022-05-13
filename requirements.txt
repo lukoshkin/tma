@@ -1,0 +1,5 @@
+beautifulsoup4==4.11.1
+omegaconf==2.1.2
+pyttsx3==2.90
+requests==2.27.1
+termcolor==1.1.0

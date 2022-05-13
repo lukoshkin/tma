@@ -1,0 +1,8 @@
+speech_rate: 140
+
+## speicify the absolute path
+history_file: /home/lukoshkin/Workspace/plugins/sh-plugins/tma/.tt_history
+
+textwidth: 80
+num_samples: 4
+
